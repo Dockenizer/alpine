@@ -1,8 +1,6 @@
-FROM alpine:3.4
+FROM alpine:latest
 MAINTAINER Jacques Moati <jacques@moati.net>
 
-RUN apk --repository http://dl-3.alpinelinux.org/alpine/edge/community/ \
-        --update \
-        add bash shadow openssl && \
+RUN apk --update add bash shadow openssl && \
 
     rm -rf /var/cache/apk/*
